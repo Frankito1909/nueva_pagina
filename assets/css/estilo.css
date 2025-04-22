@@ -1,0 +1,304 @@
+/* FONTS */
+@import url(../css/general-sans.css);
+
+
+/* VARIABLES */
+:root {
+    --c-dark: #212529;
+    --c-brand: #4ed486;
+    --c-brand-light: #26ce3c;
+    --c-brand-rgb: 135, 206, 235;
+    --c-body: #727272;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.30);
+    --transition: all 0.5s ease;
+
+}
+
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);}
+/*h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5, .h6,{
+    font-weight: 600;
+}
+*/
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+img{
+    max-height: 100%;
+    height: auto;
+}
+
+.selection-padding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+/* NAVBAR */
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+/* BNT */
+.btn{
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.btn-brand {
+    background-color: var(--c-brand);
+    color: white;
+
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+/* HERO */
+#hero{
+    background: linear-gradient(rgba(var(--c-brand-rgb)),rgba(0, 0, 0, 0.438)), url(../img/hero1.jpg);
+    background-position: center;
+    background-size: cover
+}
+
+.btn-white {
+    background-color: white; /* Fondo blanco */
+    border-color: #ccc;      /* Borde gris claro */
+  }
+
+/*card*/
+  .cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  }
+  
+  .card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    padding: 0 20px 20px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+
+  /*FOOTER*/
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1; /* El contenido se expande y empuja el footer al fondo */
+  }
+  .bg-green {
+    background-color: #00994d;
+  }
+  
+  .footer-educar {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .footer-link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #ccc;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .footer-educar {
+      text-align: center;
+      border-radius: 50px;
+    }
+  
+    .footer-educar img {
+      margin-top: 1rem;
+    }
+  }
+
+
+
+    /* Responsive tweaks for cards */
+/* Estilos personalizados para el formulario de inicio de sesión */
+
+/* MODAL base */
+* {
+  box-sizing: border-box;
+}
+
+/* Modal base */
+.modal-custom {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+}
+
+/* Animación */
+.animate {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Botones */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Botón cancelar */
+.cancelbtn {
+  background-color: #f44336;
+}
+
+/* Avatar */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 10%;
+}
+
+/* Contenedores */
+.container {
+  padding: 16px;
+}
+
+.bg-light {
+  background-color: #f1f1f1;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.signupbtn {
+  float: right;
+  width: 50%;
+}
+
+/* Responsive */
+@media screen and (max-width: 300px) {
+  .signupbtn, .cancelbtn {
+    width: 100%;
+    float: none;
+  }
+  .psw {
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}
